@@ -5,7 +5,7 @@ OPEN_DIR=$(cd $(dirname $0) && pwd)
 THEME_NAME=Wuthering
 
 SCREEN_VARIANTS=('1080p' '2k' '4k')
-THEME_VARIANTS=('changli' 'jinxi' 'jiyan' 'yinlin' 'anke' 'weilinai' 'kakaluo' 'jianxin' 'qianxiao')
+THEME_VARIANTS=('changli' 'jinxi' 'jiyan' 'yinlin' 'anke' 'weilinai' 'kakaluo' 'jianxin' 'qianxiao' 'cartethyia')
 
 screens=()
 themes=()
