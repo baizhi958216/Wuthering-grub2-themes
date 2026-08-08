@@ -35,6 +35,14 @@ sudo ./install.sh -r -t yinlin
 
 ## Issues / tweaks:
 
+### Background compatibility fix:
+
+GRUB supports baseline JPEG images but may fail to decode progressive JPEGs. The
+`aemeath`, `lynae`, `mornye`, and `younuo` backgrounds have been re-encoded as
+baseline JPEGs so these themes load without requiring ImageMagick during
+installation. Run `python3 tests/check-backgrounds.py` to verify all bundled
+backgrounds before creating a release.
+
 ### Correcting display resolution:
 
  - On the grub screen, press `c` to enter the command line
@@ -57,6 +65,8 @@ sudo ./install.sh -r -t yinlin
  - If you made changes to icons, or added a new one:
    - Delete the existing icon, if there is one
    - Run `cd assets; ./render-all.sh`
+ - Before committing a background, run `python3 tests/check-backgrounds.py`.
+   GRUB requires baseline JPEG files and cannot load progressive JPEG backgrounds.
  - Create a pull request from your branch or fork
  - If any issues occur, report then to the [issue](issues) page
 
