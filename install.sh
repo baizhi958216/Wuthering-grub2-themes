@@ -171,9 +171,9 @@ cat << EOF
 Usage: $0 [OPTION]...
 
 OPTIONS:
-  -t, --theme     Background theme variant(s) [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|qianxian|cartethyia|younuo|aemeath|lynae|mornye] (default is changli; qianxian is an alias for qianxiao)
+  -t, --theme     Background theme variant(s) [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|cartethyia|younuo|aemeath|lynae|mornye] (default is changli)
   -s, --screen    Screen display variant(s)   [1080p|2k|4k|auto] (default is 1080p)
-  -r, --remove    Remove/Uninstall theme      [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|qianxian|cartethyia|younuo|aemeath|lynae|mornye] (must add theme name option, default is changli)
+  -r, --remove    Remove/Uninstall theme      [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|cartethyia|younuo|aemeath|lynae|mornye] (must add theme name option, default is changli)
   -b, --boot      Install theme into '/boot/grub' or '/boot/grub2'
   -h, --help      Show this help
 
@@ -637,7 +637,12 @@ while [[ $# -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[7]}")
             shift
             ;;
-          qianxiao|qianxian)
+          qianxiao)
+            themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
+          qianxian)
+            prompt -w "NOTICE: 'qianxian' is a legacy alias; using the canonical name 'qianxiao'."
             themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;
@@ -717,7 +722,12 @@ while [[ $# -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[7]}")
             shift
             ;;
-          qianxiao|qianxian)
+          qianxiao)
+            themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
+          qianxian)
+            prompt -w "NOTICE: 'qianxian' is a legacy alias; using the canonical name 'qianxiao'."
             themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;

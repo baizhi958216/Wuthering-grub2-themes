@@ -5,9 +5,9 @@
 Usage:  `sudo ./install.sh [OPTIONS...]`
 
 ```
-  -t, --theme     Background theme variant(s) [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|qianxian|cartethyia|younuo|aemeath|lynae|mornye] (default is changli; qianxian is an alias for qianxiao)
+  -t, --theme     Background theme variant(s) [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|cartethyia|younuo|aemeath|lynae|mornye] (default is changli)
   -s, --screen    Screen display variant(s)   [1080p|2k|4k|auto] (default is 1080p)
-  -r, --remove    Remove/Uninstall theme      [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|qianxian|cartethyia|younuo|aemeath|lynae|mornye] (must add theme name option, default is changli)
+  -r, --remove    Remove/Uninstall theme      [changli|jinxi|jiyan|yinlin|anke|weilinai|kakaluo|jianxin|qianxiao|cartethyia|younuo|aemeath|lynae|mornye] (must add theme name option, default is changli)
   -b, --boot      install theme into '/boot/grub' or '/boot/grub2'
   -h, --help      Show this help
 ```
@@ -16,13 +16,14 @@ _If no options are used, a user interface `dialog` will show up instead_
 
 ### Examples:
 
-`qianxian` is accepted as a compatibility alias for the bundled `qianxiao`
-theme. Both commands install the same theme directory and assets:
+The canonical romanized name for the 千咲 theme is `qianxiao`:
 
 ```sh
-sudo ./install.sh -t qianxian -s 4k
 sudo ./install.sh -t qianxiao -s 4k
 ```
+
+The former spelling `qianxian` remains available as a legacy alias and installs
+the same `Wuthering-qianxiao` theme directory and assets.
 
  - Install yinlin theme on 2k display device:
 
