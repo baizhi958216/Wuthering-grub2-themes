@@ -176,6 +176,11 @@ while [[ $# -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;
+          chisa)
+            prompt -w "NOTICE: 'chisa' is an alias; using the canonical name 'qianxiao'."
+            themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
           cartethyia)
             themes+=("${THEME_VARIANTS[9]}")
             shift

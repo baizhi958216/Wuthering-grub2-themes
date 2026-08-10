@@ -16,14 +16,19 @@ _If no options are used, a user interface `dialog` will show up instead_
 
 ### Examples:
 
-The canonical romanized name for the 千咲 theme is `qianxiao`:
+The canonical repository name for the Chisa theme is `qianxiao`:
 
 ```sh
 sudo ./install.sh -t qianxiao -s 4k
 ```
 
 The former spelling `qianxian` remains available as a legacy alias and installs
-the same `Wuthering-qianxiao` theme directory and assets.
+the same `Wuthering-qianxiao` theme directory and assets. The character name
+`chisa` is also accepted as an alias:
+
+```sh
+sudo ./install.sh -t chisa -s 4k
+```
 
  - Install yinlin theme on 2k display device:
 
@@ -96,9 +101,9 @@ Generated from real boot simulation (`QEMU + UEFI + GRUB`), then compressed for 
 
 ### 2560x1600
 
-| qianxiao | cartethyia | younuo |
+| Chisa (`qianxiao`; aliases: `chisa`, `qianxian`) | cartethyia | younuo |
 |---|---|---|
-| ![qianxiao 2560x1600](previews/preview-qemu-qianxiao-2560x1600.jpg) | ![cartethyia 2560x1600](previews/preview-qemu-cartethyia-2560x1600.jpg) | ![younuo 2560x1600](previews/preview-qemu-younuo-2560x1600.jpg) |
+| ![Chisa qianxiao theme at 2560x1600](previews/preview-qemu-qianxiao-2560x1600.jpg) | ![cartethyia 2560x1600](previews/preview-qemu-cartethyia-2560x1600.jpg) | ![younuo 2560x1600](previews/preview-qemu-younuo-2560x1600.jpg) |
 
 | aemeath | lynae | mornye |
 |---|---|---|

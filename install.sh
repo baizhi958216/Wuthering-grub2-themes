@@ -646,6 +646,11 @@ while [[ $# -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;
+          chisa)
+            prompt -w "NOTICE: 'chisa' is an alias; using the canonical name 'qianxiao'."
+            themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
           cartethyia)
             themes+=("${THEME_VARIANTS[9]}")
             shift
@@ -728,6 +733,11 @@ while [[ $# -gt 0 ]]; do
             ;;
           qianxian)
             prompt -w "NOTICE: 'qianxian' is a legacy alias; using the canonical name 'qianxiao'."
+            themes+=("${THEME_VARIANTS[8]}")
+            shift
+            ;;
+          chisa)
+            prompt -w "NOTICE: 'chisa' is an alias; using the canonical name 'qianxiao'."
             themes+=("${THEME_VARIANTS[8]}")
             shift
             ;;
