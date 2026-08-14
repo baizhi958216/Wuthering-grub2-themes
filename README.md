@@ -15,6 +15,21 @@ Usage:  `sudo ./install.sh [OPTIONS...]`
 _If no options are used, a user interface `dialog` will show up instead_
 
 ### Examples:
+
+The canonical repository name for the Chisa theme is `qianxiao`:
+
+```sh
+sudo ./install.sh -t qianxiao -s 4k
+```
+
+The former spelling `qianxian` remains available as a legacy alias and installs
+the same `Wuthering-qianxiao` theme directory and assets. The character name
+`chisa` is also accepted as an alias:
+
+```sh
+sudo ./install.sh -t chisa -s 4k
+```
+
  - Install yinlin theme on 2k display device:
 
 ```sh
@@ -34,6 +49,14 @@ sudo ./install.sh -r -t yinlin
 ```
 
 ## Issues / tweaks:
+
+### Background compatibility fix:
+
+GRUB supports baseline JPEG images but may fail to decode progressive JPEGs. The
+`aemeath`, `lynae`, `mornye`, and `younuo` backgrounds have been re-encoded as
+baseline JPEGs so these themes load without requiring ImageMagick during
+installation. Run `python3 tests/check-backgrounds.py` to verify all bundled
+backgrounds before creating a release.
 
 ### Correcting display resolution:
 
@@ -57,6 +80,8 @@ sudo ./install.sh -r -t yinlin
  - If you made changes to icons, or added a new one:
    - Delete the existing icon, if there is one
    - Run `cd assets; ./render-all.sh`
+ - Before committing a background, run `python3 tests/check-backgrounds.py`.
+   GRUB requires baseline JPEG files and cannot load progressive JPEG backgrounds.
  - Create a pull request from your branch or fork
  - If any issues occur, report then to the [issue](issues) page
 
@@ -76,9 +101,9 @@ Generated from real boot simulation (`QEMU + UEFI + GRUB`), then compressed for 
 
 ### 2560x1600
 
-| qianxiao | cartethyia | younuo |
+| Chisa (`qianxiao`; aliases: `chisa`, `qianxian`) | cartethyia | younuo |
 |---|---|---|
-| ![qianxiao 2560x1600](previews/preview-qemu-qianxiao-2560x1600.jpg) | ![cartethyia 2560x1600](previews/preview-qemu-cartethyia-2560x1600.jpg) | ![younuo 2560x1600](previews/preview-qemu-younuo-2560x1600.jpg) |
+| ![Chisa qianxiao theme at 2560x1600](previews/preview-qemu-qianxiao-2560x1600.jpg) | ![cartethyia 2560x1600](previews/preview-qemu-cartethyia-2560x1600.jpg) | ![younuo 2560x1600](previews/preview-qemu-younuo-2560x1600.jpg) |
 
 | aemeath | lynae | mornye |
 |---|---|---|
